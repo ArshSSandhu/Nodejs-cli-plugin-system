@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
-const require_module_1 = __importDefault(require("require-module")); // Install this package if not already
+//import requireModule from './node_modules/require-module'; // Install this package if not already
 class PluginManager {
     constructor(basePath) {
         this.pluginList = new Map();
@@ -19,7 +19,7 @@ class PluginManager {
         }
         try {
             // Try to load the plugin
-            const packageContents = plugin.isRelative ? (0, require_module_1.default)(path_1.default.join(this.path, plugin.packageName)) : (0, require_module_1.default)(plugin.packageName);
+            const packageContents = plugin.isRelative ? require(path_1.default.join(this.path, plugin.packageName)) : require(plugin.packageName);
             this.addPlugin(plugin, packageContents);
         }
         catch (error) {

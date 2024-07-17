@@ -11,7 +11,7 @@ class TextCLI {
         this.pluginManager.registerPlugin({
             name: 'echo-plugin',
             packageName: './echoPlugin',
-            isRelative: true
+            isRelative: true,
         });
     }
     displayPrompt() {
@@ -19,8 +19,8 @@ class TextCLI {
         this.pluginManager.listPluginList().forEach((plugin) => {
             pluginChoices.push(plugin.name);
         });
-        inquirer_1.default
-            .prompt([
+        // Define the questions with explicit types
+        const questions = [
             {
                 type: 'input',
                 name: 'text',
@@ -32,8 +32,8 @@ class TextCLI {
                 message: 'What plugin do you want to execute?',
                 choices: pluginChoices,
             },
-        ])
-            .then((answer) => {
+        ];
+        inquirer_1.default.prompt(questions).then((answer) => {
             // Execute the plugin
             const textPlugin = this.pluginManager.loadPlugin(answer.pluginName);
             console.log(`This is the transformed result for ${answer.text}: ${textPlugin.transformText(answer.text)}`);
