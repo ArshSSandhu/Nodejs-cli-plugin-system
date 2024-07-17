@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-cli-plugin-system",
+  "version": "1.0.0",
+  "description": "A simple plugin system built with Node.Js and TypeScript. It features a Command Line Interface (CLI) application that allows user to select and apply various text transformation plugins to input text.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ArshSSandhu/Nodejs-cli-plugin-system"
+  },
+  "keywords": [
+    "Plugin",
+    "System",
+    "CLI",
+    "Command",
+    "Line",
+    "Interface",
+    "Text",
+    "Transformation",
+    "NPM"
+  ],
+  "author": "Arshpreet Singh Sandhu",
+  "license": "ISC"
+}
