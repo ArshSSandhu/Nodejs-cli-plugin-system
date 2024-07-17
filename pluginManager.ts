@@ -1,6 +1,6 @@
 import path from 'path';
 import { IPlugin } from './types';
-import requireModule from 'require-module'; // Install this package if not already
+//import requireModule from './node_modules/require-module'; // Install this package if not already
 
 class PluginManager {
   private pluginList: Map<string, IPlugin>;
@@ -22,7 +22,7 @@ class PluginManager {
 
     try {
       // Try to load the plugin
-      const packageContents = plugin.isRelative ? requireModule(path.join(this.path, plugin.packageName)) : requireModule(plugin.packageName);
+      const packageContents = plugin.isRelative ? require(path.join(this.path, plugin.packageName)) : require(plugin.packageName);
       this.addPlugin(plugin, packageContents);
     } catch (error) {
       console.log(`Cannot load plugin ${plugin.name}`, error);

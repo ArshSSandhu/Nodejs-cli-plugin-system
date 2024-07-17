@@ -25,6 +25,7 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
-    "inquirer": "^10.0.2"
+    "inquirer": "^10.0.2",
+    "require-module": "^0.1.0"
   }
 }
