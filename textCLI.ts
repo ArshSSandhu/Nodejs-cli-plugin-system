@@ -1,6 +1,6 @@
 import PluginManager from './pluginManager';  //importing plugin manager class
-import { TextPlugin } from './types';
-import inquirer from 'inquirer';
+import { TextPlugin } from './types'; //imported text plugin interface from types.ts
+import inquirer from 'inquirer'; //imported inquirer library
  
 export interface ITextSelectedChoice {
  text: string;
