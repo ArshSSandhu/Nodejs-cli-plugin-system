@@ -1,5 +1,5 @@
-import PluginManager from '@text-plugins/plugin-manager'; // Importing PluginManager class from '@text-plugins/plugin-manager' module
-import { TextPlugin } from '@text-plugins/types'; // Importing TextPlugin interface from '@text-plugins/types' module
+import PluginManager from './pluginManager'; // Importing PluginManager class from '@text-plugins/plugin-manager' module
+import { TextPlugin } from './types'; // Importing TextPlugin interface from '@text-plugins/types' module
 import inquirer from 'inquirer'; // Importing inquirer library for interactive prompts
 
 // Interface definition for the user's selected choice in prompts
