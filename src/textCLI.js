@@ -1,12 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const inquirer_1 = __importDefault(require("inquirer")); // Importing inquirer library for interactive prompts
+var inquirer_1 = require("inquirer"); // Importing inquirer library for interactive prompts
 // Class definition for the CLI application
-class TextCLI {
-    constructor(pluginManager) {
+var TextCLI = /** @class */ (function () {
+    function TextCLI(pluginManager) {
         this.pluginManager = pluginManager; // Assigning the passed PluginManager instance to this.pluginManager
         // Registering a default behavior plugin named 'echo-plugin'
         this.pluginManager.registerPlugin({
@@ -16,13 +13,14 @@ class TextCLI {
         });
     }
     // Method to display prompts and handle user input
-    displayPrompt() {
-        const pluginChoices = [];
+    TextCLI.prototype.displayPrompt = function () {
+        var _this = this;
+        var pluginChoices = [];
         // Iterating over the list of registered plugins and extracting their names
-        this.pluginManager.listPluginList().forEach((plugin) => {
+        this.pluginManager.listPluginList().forEach(function (plugin) {
             pluginChoices.push(plugin.name); // Adding each plugin's name to pluginChoices array
         });
-        const questions = [
+        var questions = [
             {
                 type: 'input',
                 name: 'text',
@@ -37,13 +35,14 @@ class TextCLI {
         ];
         inquirer_1.default
             .prompt(questions)
-            .then((answers) => {
+            .then(function (answers) {
             // Destructure the answer object to match ITextSelectedChoice
-            const { text, pluginName } = answers;
+            var _a = answers, text = _a.text, pluginName = _a.pluginName;
             // Execute the selected plugin
-            const textPlugin = this.pluginManager.loadPlugin(pluginName); // Loading the selected plugin
-            console.log(`This is the transformed result for ${text}: ${textPlugin.transformText(text)}`); // Logging the transformed result
+            var textPlugin = _this.pluginManager.loadPlugin(pluginName); // Loading the selected plugin
+            console.log("This is the transformed result for ".concat(text, ": ").concat(textPlugin.transformText(text))); // Logging the transformed result
         });
-    }
-}
+    };
+    return TextCLI;
+}());
 exports.default = TextCLI; // Exporting the TextCLI class as default
