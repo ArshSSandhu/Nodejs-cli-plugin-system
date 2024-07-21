@@ -3,4 +3,11 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## Features
+
+- **Pluggable Architecture**: Easily add or remove plugins to extend functionality.
+- **Built with TypeScript**: Ensures type safety and better code maintainability.
+- **Command Line Interface**: Simple and intuitive CLI for applying text transformations.
+- **Modular Design**: Clear separation of concerns, making the codebase easier to understand and extend.
+
 
