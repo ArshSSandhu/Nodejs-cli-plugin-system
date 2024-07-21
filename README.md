@@ -38,4 +38,18 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
     npx tsc
     ```
 
+## Usage
 
+1. **Navigate to the build directory:**
+
+    ```bash
+    cd dist
+    ```
+
+2. **Run the application:**
+
+    ```bash
+    node index.js
+    ```
+
+3. **Follow the prompts to enter the text and choose a plugin for transformation.**
