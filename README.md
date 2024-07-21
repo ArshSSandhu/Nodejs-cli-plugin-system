@@ -55,7 +55,7 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 3. **Follow the prompts to enter the text and choose a plugin for transformation.**
 
 ## Example
-![Refer to this image](images/Screenshot (456).png)
+![Refer to this image](images/Screenshot(456).png)
 
 ![Refer to this image](images/image1.png)
 
