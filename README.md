@@ -55,7 +55,13 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 3. **Follow the prompts to enter the text and choose a plugin for transformation.**
 
 ## Example
-![Homepage](https://github.com/ArshSSandhu/Nodejs-cli-plugin-system/images/Screenshot(456).png)
+[![Homepage](https://github.com/ArshSSandhu/Nodejs-cli-plugin-system/images/Screenshot(456).png)](https://github.com/ArshSSandhu/Nodejs-cli-plugin-system/blob/main/images/Screenshot%20(456).png)
+
+[![Homepage](https://github.com/ArshSSandhu/Nodejs-cli-plugin-system/images/Screenshot(456).png)](https://github.com/ArshSSandhu/Nodejs-cli-plugin-system/blob/main/images/Screenshot%20(457).png)
+
+[![Homepage](https://github.com/ArshSSandhu/Nodejs-cli-plugin-system/images/Screenshot(456).png)](https://github.com/ArshSSandhu/Nodejs-cli-plugin-system/blob/main/images/Screenshot%20(458).png)
+
+
 
 
 
