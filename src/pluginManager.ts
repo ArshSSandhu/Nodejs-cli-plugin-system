@@ -1,5 +1,10 @@
-import path from 'path';
+import * as path from 'path';
 import { IPlugin } from './types';
+
+import inquirer from 'inquirer';
+import Question from "inquirer";
+
+
 //import requireModule from './node_modules/require-module'; // Install this package if not already
 
 class PluginManager {

@@ -1,5 +1,6 @@
-import TextCLI from './textCLI';
-import PluginManager from './pluginManager';
+
+import TextCLI from '../textCLI';
+import PluginManager from '../pluginManager';
 
 const manager = new PluginManager(__dirname);
 

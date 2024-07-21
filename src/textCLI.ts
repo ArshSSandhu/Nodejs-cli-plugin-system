@@ -32,26 +32,31 @@ class TextCLI {
       pluginChoices.push(plugin.name); // Adding each plugin's name to pluginChoices array
     });
 
-    // Prompting the user with interactive questions
+    type Question = any
+    const questions: Question[] = [
+      {
+        type: 'input',
+        name: 'text',
+        message: 'What text do you want to transform?', // Prompt message for text input
+      },
+      {
+        type: 'list',
+        name: 'pluginName',
+        message: 'What plugin do you want to execute?', // Prompt message for plugin selection
+        choices: pluginChoices, // Available plugin choices obtained earlier
+      },
+    ];
+  
     inquirer
-      .prompt([
-        {
-          type: 'input',
-          name: 'text',
-          message: 'What text do you want to transform?', // Prompt message for text input
-        },
-        {
-          type: 'list',
-          name: 'pluginName',
-          message: 'What plugin do you want to execute?', // Prompt message for plugin selection
-          choices: pluginChoices, // Available plugin choices obtained earlier
-        },
-      ])
-      .then((answer: ITextSelectedChoice) => {
-        // After user answers, execute the selected plugin
-        const textPlugin = this.pluginManager.loadPlugin<TextPlugin>(answer.pluginName); // Loading the selected plugin
-        console.log(`This is the transformed result for ${answer.text}: ${textPlugin.transformText(answer.text)}`); // Logging the transformed result
+      .prompt(questions)
+      .then((answers) => {
+        // Destructure the answer object to match ITextSelectedChoice
+        const { text, pluginName }: ITextSelectedChoice = answers as ITextSelectedChoice;
+        // Execute the selected plugin
+        const textPlugin = this.pluginManager.loadPlugin<TextPlugin>(pluginName); // Loading the selected plugin
+        console.log(`This is the transformed result for ${text}: ${textPlugin.transformText(text)}`); // Logging the transformed result
       });
+
   }
 }
 
