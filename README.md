@@ -10,4 +10,32 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 - **Command Line Interface**: Simple and intuitive CLI for applying text transformations.
 - **Modular Design**: Clear separation of concerns, making the codebase easier to understand and extend.
 
+  ## Installation
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+### Steps
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/yourusername/text-cli.git
+    cd text-cli
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Build the project:**
+
+    ```bash
+    npx tsc
+    ```
+
 
