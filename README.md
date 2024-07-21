@@ -57,9 +57,9 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 ## Example
 ![Refer to this image](images/img1.png)
 
-![Refer to this image](images/image2.png)
+![Refer to this image](images/img2.png)
 
-![Refer to this image](images/image3.png)
+![Refer to this image](images/img3.png)
 
 
 
