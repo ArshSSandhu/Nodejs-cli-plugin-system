@@ -10,7 +10,7 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 - **Command Line Interface**: Simple and intuitive CLI for applying text transformations.
 - **Modular Design**: Clear separation of concerns, making the codebase easier to understand and extend.
 
-  ## Installation
+## Installation
 
 ### Prerequisites
 
