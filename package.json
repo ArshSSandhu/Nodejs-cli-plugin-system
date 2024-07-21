@@ -27,5 +27,8 @@
     "colors": "^1.4.0",
     "inquirer": "^10.0.2",
     "require-module": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
   }
 }
