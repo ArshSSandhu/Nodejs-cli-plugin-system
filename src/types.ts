@@ -1,13 +1,17 @@
 export interface IPlugin {
-    name: string;
-    packageName: string;
-    isRelative?: boolean;
-    instance?: any;
-    options?: any;
+  name: string;
+  packageName: string;
+  isRelative?: boolean;
+  instance?: any;
+  options?: any;
+}
+
+export abstract class TextPlugin {
+  options: any;
+
+  constructor(options?: any) {
+    this.options = options;
   }
-  
-  export abstract class TextPlugin {
-    options: any;
-    abstract transformText(text: string): string;
-  }
-  
+
+  abstract transformText(text: string): string;
+}

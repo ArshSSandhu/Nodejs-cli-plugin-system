@@ -11,6 +11,14 @@ var TextCLI = /** @class */ (function () {
             packageName: './echoPlugin',
             isRelative: true 
         });
+
+ // Register new Uppercase Plugin
+// this.pluginManager.registerPlugin({
+   // name: 'uppercase-plugin',
+   // packageName: './upperCasePlugin',
+  //  isRelative: true,
+//  });
+
     }
    
     TextCLI.prototype.displayPrompt = function () {

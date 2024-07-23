@@ -9,11 +9,19 @@ class TextCLI {
     constructor(pluginManager) {
         this.pluginManager = pluginManager; // Assigning the passed PluginManager instance to this.pluginManager
         // Registering a default behavior plugin named 'echo-plugin'
-        this.pluginManager.registerPlugin({
-            name: 'echo-plugin', // Plugin name
-            packageName: './echoPlugin', // Package location (relative path)
-            isRelative: true // Indicates that the path is relative to the current file
+     this.pluginManager.registerPlugin({
+           name: 'echo-plugin', // Plugin name
+           packageName: './echoPlugin', // Package location (relative path)
+           isRelative: true // Indicates that the path is relative to the current file
         });
+
+        // Register new Uppercase Plugin
+    this.pluginManager.registerPlugin({
+       name: 'uppercase-plugin',
+       packageName: './src/upperCasePlugin',
+        isRelative: true,
+      });
+
     }
     // Method to display prompts and handle user input
     displayPrompt() {
