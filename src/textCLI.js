@@ -11,6 +11,14 @@ var TextCLI = /** @class */ (function () {
             packageName: './echoPlugin', // Package location (relative path)
             isRelative: true // Indicates that the path is relative to the current file
         });
+
+ // Register new Uppercase Plugin
+// this.pluginManager.registerPlugin({
+   // name: 'uppercase-plugin',
+   // packageName: './upperCasePlugin',
+  //  isRelative: true,
+//  });
+
     }
     // Method to display prompts and handle user input
     TextCLI.prototype.displayPrompt = function () {
