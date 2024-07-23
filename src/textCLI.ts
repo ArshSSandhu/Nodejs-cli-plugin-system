@@ -4,23 +4,23 @@ import inquirer from 'inquirer'; // Importing inquirer library for interactive p
 
 // Interface definition for the user's selected choice in prompts
 export interface ITextSelectedChoice {
-  text: string; // Holds the text input from the user
-  pluginName: string; // Holds the name of the plugin selected by the user
+  text: string; 
+  pluginName: string; 
 }
 
-// Class definition for the CLI application
+
 class TextCLI {
-  private pluginManager: PluginManager; // Declaring a private property pluginManager of type PluginManager
+  private pluginManager: PluginManager; 
 
   constructor(pluginManager: PluginManager) {
-    this.pluginManager = pluginManager; // Assigning the passed PluginManager instance to this.pluginManager
+    this.pluginManager = pluginManager; 
 
     // Registering a default behavior plugin named 'echo-plugin'
-  //  this.pluginManager.registerPlugin({
-   //   name: 'echo-plugin', // Plugin name
-    //  packageName: './echoPlugin', // Package location (relative path)
-   //   isRelative: true // Indicates that the path is relative to the current file
-  //  });
+    this.pluginManager.registerPlugin({
+      name: 'echo-plugin', // Plugin name
+      packageName: './echoPlugin', // Package location (relative path)
+      isRelative: true // Indicates that the path is relative to the current file
+    });
 
     // Register new Uppercase Plugin
     this.pluginManager.registerPlugin({
@@ -47,13 +47,13 @@ class TextCLI {
 
   }
 
-  // Method to display prompts and handle user input
+  
   displayPrompt(): void {
     const pluginChoices: string[] = [];
 
-    // Iterating over the list of registered plugins and extracting their names
+
     this.pluginManager.listPluginList().forEach((plugin) => {
-      pluginChoices.push(plugin.name); // Adding each plugin's name to pluginChoices array
+      pluginChoices.push(plugin.name); 
     });
 
     type Question = any
@@ -61,27 +61,27 @@ class TextCLI {
       {
         type: 'input',
         name: 'text',
-        message: 'What text do you want to transform?', // Prompt message for text input
+        message: 'What text do you want to transform?', 
       },
       {
         type: 'list',
         name: 'pluginName',
-        message: 'What plugin do you want to execute?', // Prompt message for plugin selection
-        choices: pluginChoices, // Available plugin choices obtained earlier
+        message: 'What plugin do you want to execute?', 
+        choices: pluginChoices,
       },
     ];
   
     inquirer
       .prompt(questions)
       .then((answers) => {
-        // Destructure the answer object to match ITextSelectedChoice
+       
         const { text, pluginName }: ITextSelectedChoice = answers as ITextSelectedChoice;
-        // Execute the selected plugin
-        const textPlugin = this.pluginManager.loadPlugin<TextPlugin>(pluginName); // Loading the selected plugin
-        console.log(`This is the transformed result for ${text}: ${textPlugin.transformText(text)}`); // Logging the transformed result
+      
+        const textPlugin = this.pluginManager.loadPlugin<TextPlugin>(pluginName); 
+        console.log(`This is the transformed result for ${text}: ${textPlugin.transformText(text)}`);
       });
 
   }
 }
 
-export default TextCLI; // Exporting the TextCLI class as default
+export default TextCLI; 
