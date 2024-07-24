@@ -22,6 +22,13 @@ class TextCLI {
         isRelative: true,
                                         });
 
+    // Register new LowerCase Plugin
+    this.pluginManager.registerPlugin({
+        name: 'lowercase-plugin',
+        packageName: './src/lowerCasePlugin',
+        isRelative: true,
+                                       });
+
     }
    
     displayPrompt() {
