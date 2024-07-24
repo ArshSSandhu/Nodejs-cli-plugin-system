@@ -29,13 +29,6 @@ class TextCLI {
       isRelative: true,
     });
 
-    // Register new LowerCase Plugin
-    this.pluginManager.registerPlugin({
-      name: 'lowercase-plugin',
-      packageName: './lowerCasePlugin',
-      isRelative: true,
-    });
-
       // Register other plugins
       this.pluginManager.registerPlugin({
         name: 'colors-plugin',
