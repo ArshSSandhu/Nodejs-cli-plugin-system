@@ -69,6 +69,17 @@ Refer to my website here to build your own plugin
 
 ![Refer to this image](images/imageX.png)
 
+## Resource I Used 
+
+I found the following article extremely helpful in creating this system:
+- [How to Build a Plugin System](https://stateful.com/blog/build-a-plugin-system-with-node)
+
+## Acknowledgments
+
+I want to express my gratitude to:
+- **MIE Company** for the opportunity and support throughout the project.
+- **Doug Horner** for his invaluable guidance and mentorship.
+
 
 
 
