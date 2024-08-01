@@ -62,6 +62,10 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 
 ![Refer to this image](images/img2.png)
 
+## Want to Contribute?
+1) Build Plugins of your Choice and create PR
+
+
 
 
 
