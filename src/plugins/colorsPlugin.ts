@@ -1,4 +1,4 @@
-import { TextPlugin } from './types';
+import { TextPlugin } from '../types';
 import colors from 'colors';
 
 class ColorsPlugin extends TextPlugin {

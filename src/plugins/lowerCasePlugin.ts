@@ -1,4 +1,4 @@
-import { TextPlugin } from './types';
+import { TextPlugin } from '../types';
 
 
 class LowercasePlugin implements TextPlugin {

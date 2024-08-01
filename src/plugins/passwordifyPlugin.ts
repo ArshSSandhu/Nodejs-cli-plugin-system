@@ -1,4 +1,4 @@
-import { TextPlugin } from './types';
+import { TextPlugin } from '../types';
 
 class PasswordifyPlugin extends TextPlugin {
     transformText(text: string): string {
