@@ -35,6 +35,7 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 3. **Build the project:**
 
     ```bash
+    cd src
     npx tsc
     ```
 
@@ -43,7 +44,7 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 1. **Navigate to the build directory:**
 
     ```bash
-    cd dist
+    cd ../jsfiles
     ```
 
 2. **Run the application:**
@@ -60,6 +61,13 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 ![Refer to this image](images/img1.png)
 
 ![Refer to this image](images/img2.png)
+
+## Want to Contribute?
+Build Plugins of your Choice and create PR. It's easier than you think.
+Refer to my website here to build your own plugin
+[Plugin Tutorial](https://free-5345802.webadorsite.com/)
+
+
 
 
 
