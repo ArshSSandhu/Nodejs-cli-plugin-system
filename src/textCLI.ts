@@ -44,7 +44,7 @@ class TextCLI {
       });
   
       this.pluginManager.registerPlugin({
-        name: 'passwordify-plin',
+        name: 'passwordify-plugin',
         packageName: './passwordifyPlugin',
         isRelative: true,
         options: {
