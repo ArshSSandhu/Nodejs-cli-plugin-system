@@ -52,6 +52,13 @@ class TextCLI {
         }
       });
 
+      // Register new Alphabet Count Plugin
+      this.pluginManager.registerPlugin({
+      name: 'alphabet-count-plugin',
+      packageName: './plugins/alphabetCountPlugin',
+      isRelative: true,
+    });
+
   }
 
   
