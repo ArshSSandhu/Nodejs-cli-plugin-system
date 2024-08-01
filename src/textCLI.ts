@@ -18,34 +18,34 @@ class TextCLI {
     // Registering a default behavior plugin named 'echo-plugin'
     this.pluginManager.registerPlugin({
       name: 'echo-plugin', // Plugin name
-      packageName: './echoPlugin', // Package location (relative path)
+      packageName: './plugins/echoPlugin', // Package location (relative path)
       isRelative: true // Indicates that the path is relative to the current file
     });
 
     // Register new Uppercase Plugin
     this.pluginManager.registerPlugin({
       name: 'uppercase-plugin',
-      packageName: './upperCasePlugin',
+      packageName: './plugins/upperCasePlugin',
       isRelative: true,
     });
 
     // Register new LowerCase Plugin
     this.pluginManager.registerPlugin({
       name: 'lowercase-plugin',
-      packageName: './lowerCasePlugin',
+      packageName: './plugins/lowerCasePlugin',
       isRelative: true,
     });
 
       // Register other plugins
       this.pluginManager.registerPlugin({
         name: 'colors-plugin',
-        packageName: './colorsPlugin',
+        packageName: './plugins/colorsPlugin',
         isRelative: true,
       });
   
       this.pluginManager.registerPlugin({
         name: 'passwordify-plugin',
-        packageName: './passwordifyPlugin',
+        packageName: './plugins/passwordifyPlugin',
         isRelative: true,
         options: {
           symbol: '*'
