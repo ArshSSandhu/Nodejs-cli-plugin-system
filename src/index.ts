@@ -8,7 +8,7 @@ const manager = new PluginManager(__dirname);
 
 const pluginDirectory = path.join(__dirname, 'plugins');
 fs.readdirSync(pluginDirectory).forEach(file => {
-  if (file.endsWith('.js')) { // Adjust based on whether you compile TypeScript to JS
+  if (file.endsWith('.js')) { 
     const pluginName = path.basename(file, '.js');
     manager.registerPlugin({
       name: `${pluginName}`,
