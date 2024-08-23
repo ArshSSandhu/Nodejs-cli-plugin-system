@@ -1,13 +1,11 @@
-import PluginManager from './pluginManager'; // Importing PluginManager class from '@text-plugins/plugin-manager' module
-import { TextPlugin } from './types'; // Importing TextPlugin interface from '@text-plugins/types' module
-import inquirer from 'inquirer'; // Importing inquirer library for interactive prompts
+import PluginManager from './pluginManager'; 
+import { TextPlugin } from './types'; 
+import inquirer from 'inquirer'; 
 
-// Interface definition for the user's selected choice in prompts
 export interface ITextSelectedChoice {
   text: string; 
   pluginName: string; 
 }
-
 
 class TextCLI {
   private pluginManager: PluginManager; 
@@ -17,7 +15,6 @@ class TextCLI {
 
   }
 
-  
   displayPrompt(): void {
     const pluginChoices: string[] = [];
 
