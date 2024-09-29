@@ -65,7 +65,7 @@ This project demonstrates a simple plugin system built with Node.js and TypeScri
 ## Want to Contribute?
 Build Plugins of your Choice and create PR. It's easier than you think.
 Refer to my website here to build your own plugin
-[Plugin Tutorial](https://arshssandhu.github.io/plugin-system-website/free-5345802.webadorsite.com/index.html)
+[Plugin Tutorial](https://arshssandhu.github.io/Nodejs-cli-plugin-system/free-5345802.webadorsite.com/index.html)
 
 ![Refer to this image](images/imageX.png)
 
