@@ -78,7 +78,7 @@ I found the following article extremely helpful in creating this system:
 
 I want to express my gratitude to: <br>
 **MIE**  My internship company for the opportunity and support throughout the project. <br>
-**Doug Horner** The CEO,for his invaluable guidance and mentorship.<br>
+**Doug Horner** The CEO, for his invaluable guidance and mentorship.<br>
 
 
 
