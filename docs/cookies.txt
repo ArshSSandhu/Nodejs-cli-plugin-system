@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+free-5345802.webadorsite.com	TRUE	/	FALSE	1999999999	JwStickySession	cZ57oa1p1W7aDsuJ5Ai%2BpqMu%2BIR75hOf
+free-5345802.webadorsite.com	TRUE	/	FALSE	1999999999	JWSESSION	usql4fah2l7tlsvr73mlgj2vlgggabck
+free-5345802.webadorsite.com	TRUE	/	FALSE	1999999999	samesite	lax
+

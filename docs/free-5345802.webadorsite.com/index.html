@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    
+<!-- Mirrored from free-5345802.webadorsite.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Sep 2024 00:28:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="canonical" href="index.html">
+        <meta property="og:title" content="Plugin-Tutorial-Node-CLI">
+        <meta property="og:url" content="index.html">
+        <base >
+        <meta name="description" property="og:description" content="">
+                <script nonce="be8ca30f0b47f2584be1a23266e648f9">
+            window.JOUWWEB = window.JOUWWEB || {}; window.JOUWWEB.application = window.JOUWWEB.application || {}; window.JOUWWEB.application = {"editorLocale":"en-US","editorTimezone":"America\/New_York","editorLanguage":"en","analytics4TrackingId":"G-E6PZPGE4QM","backendDomain":"www.webador.com","backendShortDomain":"webador.com","backendKey":"webador-com","freeWebsiteDomain":"webadorsite.com","noSsl":false,"build":{"reference":"e509047"},"linkHostnames":["www.jouwweb.nl","www.webador.com","www.webador.de","www.webador.fr","www.webador.es","www.webador.it","www.jouwweb.be","www.webador.ie","www.webador.co.uk","www.webador.at","www.webador.be","www.webador.ch","fr.webador.ch","www.webador.mx","es.webador.com","www.webador.dk","www.webador.se","www.webador.no","www.webador.fi","www.webador.ca","fr.webador.ca"],"assetsUrl":"https:\/\/assets.jwwb.nl","loginUrl":"https:\/\/www.webador.com\/login","developer":false,"pricing":{"plans":{"lite":{"amount":"700","currency":"USD"},"pro":{"amount":"1200","currency":"USD"},"business":{"amount":"2400","currency":"USD"}},"yearlyDiscount":{"price":{"amount":"7200","currency":"USD"},"ratio":0.57,"percent":"57%","discountPrice":{"amount":"7200","currency":"USD"},"termPricePerMonth":{"amount":"1200","currency":"USD"},"termPricePerYear":{"amount":"10800","currency":"USD"}}}};window.JOUWWEB.brand = {"type":"webador","name":"Webador","domain":"Webador.com","supportEmail":"support@webador.com"};            window.JOUWWEB = window.JOUWWEB || {}; window.JOUWWEB.websiteRendering = {"locale":"en-GB","timezone":"America\/New_York","routes":{"api\/upload\/product-field":"\/_api\/upload\/product-field","checkout\/cart":"\/cart","payment":"\/complete-order\/:publicOrderId","payment\/forward":"\/complete-order\/:publicOrderId\/forward","public-order":"\/order\/:publicOrderId","checkout\/authorize":"\/cart\/authorize\/:gateway","wishlist":"\/wishlist"}};                                        window.JOUWWEB.website = {"id":5345802,"locale":"en-GB","enabled":true,"title":"Plugin-Tutorial-Node-CLI","hasTitle":true,"roleOfLoggedInUser":null,"ownerLocale":"en-US","plan":null,"freeWebsiteDomain":"webadorsite.com","backendKey":"webador-com","currency":"USD","defaultLocale":"en-GB","url":"https:\/\/free-5345802.webadorsite.com\/","homepageSegmentId":22586647,"homepageSegmentType":"page","category":"website","isOffline":false,"locales":[],"allowed":{"ads":true,"credits":false,"slideshow":true,"hostedAlbums":false,"moderators":false,"mailboxQuota":0,"statistics":false,"favicon":false,"password":false,"freeDomains":0,"freeMailAccounts":0,"canUseLanguages":false,"fileUpload":false,"legacyFontSize":false,"webshop":false,"products":-1,"imageText":false,"search":false,"audioUpload":false,"videoUpload":0,"allowDangerousForms":false,"statisticsMonths":0,"allowHtmlCode":false,"mobileBar":false,"sidebar":false,"poll":false,"allowCustomForms":false,"allowBusinessListing":false,"allowCustomAnalytics":false,"allowAccountingLink":false,"digitalProducts":false,"sitemapElement":false},"mobileBar":{"enabled":false,"theme":"accent","email":{"active":true},"location":{"active":true},"phone":{"active":true},"whatsapp":{"active":false},"social":{"active":false,"network":"facebook"}},"webshop":{"enabled":false,"currency":"USD","taxEnabled":false,"taxInclusive":false,"vatDisclaimerVisible":false,"orderNotice":null,"orderConfirmation":null,"freeShipping":false,"freeShippingAmount":"0.00","shippingDisclaimerVisible":false,"pickupAllowed":false,"couponAllowed":false,"detailsPageAvailable":true,"socialMediaVisible":false,"termsPage":null,"termsPageUrl":null,"extraTerms":null,"pricingVisible":true,"orderButtonVisible":true,"shippingAdvanced":false,"shippingAdvancedBackEnd":false,"soldOutVisible":true,"backInStockNotificationEnabled":true,"canAddProducts":true,"nextOrderNumber":1,"allowedServicePoints":[],"sendcloudConfigured":false,"sendcloudFallbackPublicKey":"a3d50033a59b4a598f1d7ce7e72aafdf","taxExemptionAllowed":false,"invoiceComment":null,"emptyCartVisible":true,"minimumOrderPrice":null,"productNumbersEnabled":false,"wishlistEnabled":true,"hideTaxOnCart":true},"isTreatedAsWebshop":false};                            window.JOUWWEB.cart = {"products":[],"coupon":null,"shippingCountryCode":null,"shippingChoice":null,"breakdown":[]};                            window.JOUWWEB.scripts = [];                        window.parent.JOUWWEB.colorPalette = window.JOUWWEB.colorPalette;
+            if (window.JOUWWEB.editor) {
+                window.JOUWWEB.editor.elements = [];
+            }
+        </script>
+                <title>Plugin-Tutorial-Node-CLI</title>
+                                            <link href="../assets.jwwb.nl/assets/brand/webador/icon/faviconc9ef.png?bust=2299e1307cbb69076146" rel="shortcut icon" />                                                <link href="../assets.jwwb.nl/assets/brand/webador/icon/faviconc9ef.png?bust=2299e1307cbb69076146" rel="icon" />                                        <meta property="og:image" content="https&#x3A;&#x2F;&#x2F;primary.jwwb.nl&#x2F;public&#x2F;y&#x2F;r&#x2F;b&#x2F;temp-fjnargaqiagjydzrcslc&#x2F;pasted-image-thu-aug-01-2024-02-08-22-gmt-0400-eastern-daylight-time-high.png">
+                    <meta property="og:image" content="https&#x3A;&#x2F;&#x2F;primary.jwwb.nl&#x2F;public&#x2F;y&#x2F;r&#x2F;b&#x2F;temp-fjnargaqiagjydzrcslc&#x2F;snip1-high.png">
+                                    <meta name="twitter:card" content="summary_large_image">
+                        <meta property="twitter:image" content="https&#x3A;&#x2F;&#x2F;primary.jwwb.nl&#x2F;public&#x2F;y&#x2F;r&#x2F;b&#x2F;temp-fjnargaqiagjydzrcslc&#x2F;pasted-image-thu-aug-01-2024-02-08-22-gmt-0400-eastern-daylight-time-high.png">
+                                        <link
+                rel="alternate"
+                hreflang="en-GB"
+                href="index.html"
+            >
+                                            <script src="../www.google.com/recaptcha/enterprised027.js?hl=en&amp;render=explicit" nonce="be8ca30f0b47f2584be1a23266e648f9"></script>
+<script src="../plausible.io/js/script.manual.js" nonce="be8ca30f0b47f2584be1a23266e648f9" defer="1" data-domain="shard2.jouwweb.nl"></script>
+<link rel="stylesheet" type="text/css" href="https://gfonts.jwwb.nl/css?display=fallback&amp;family=Hind%3A400%2C700%2C400italic%2C700italic%7CPlayfair+Display%3A400%2C700%2C400italic%2C700italic" />
+<link rel="preload" href="../assets.jwwb.nl/assets/website-rendering/styles.1dfd1acd2fd560e54b2c61d7.css?bust=8e0ef6dcaa3404507b49" as="style" />
+<link rel="preload" href="https://assets.jwwb.nl/assets/website-rendering/fonts/icons-website-rendering/font/website-rendering.woff2?bust=75c266641ea17e898ac3" as="font" crossorigin="1" />
+<link rel="preconnect" href="https://gfonts.jwwb.nl/" />
+<link rel="stylesheet" type="text/css" href="../assets.jwwb.nl/assets/website-rendering/styles.1dfd1acd2fd560e54b2c61d7.css?bust=8e0ef6dcaa3404507b49" />
+<link rel="preconnect" href="https://assets.jwwb.nl/" />
+<link rel="stylesheet" type="text/css" href="../primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/style593d.css?bust=1727569235" />    </head>
+    <body
+        id="top"
+        class="jw-is-no-slideshow jw-header-is-image jw-is-segment-page jw-is-frontend jw-is-no-sidebar jw-is-no-messagebar jw-is-no-touch-device jw-is-no-mobile"
+                                    data-jouwweb-page="22586647"
+                                                data-jouwweb-segment-id="22586647"
+                                                data-jouwweb-segment-type="page"
+                                                data-template-threshold="960"
+                                                data-template-name="concert-banner&#x7C;suit"
+                            itemscope
+        itemtype="https://schema.org/WebSite"
+    >
+        <meta itemprop="url" content="https://free-5345802.webadorsite.com/">
+        <div class="jw-background"></div>
+        <div class="jw-body">
+            <div class="jw-mobile-menu jw-mobile-is-logo js-mobile-menu">
+            <span class="jw-mobile-menu__button jw-mobile-menu__button--dummy"></span>        <div class="jw-mobile-header jw-mobile-header--image">
+        <span            class="jw-mobile-header-content"
+                        >
+                            <img class="jw-mobile-logo jw-mobile-logo--landscape" src="../primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/mie-image-highe2ef.png?enable-io=true&amp;enable=upscale&amp;height=70" srcset="https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/mie-image-high.png?enable-io=true&amp;enable=upscale&amp;height=70 1x, https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/mie-image-high.png?enable-io=true&amp;enable=upscale&amp;height=140&amp;quality=70 2x" alt="Plugin-Tutorial-Node-CLI" title="Plugin-Tutorial-Node-CLI" />                                </span>
+    </div>
+
+    
+            <button
+            type="button"
+            class="jw-mobile-menu__button jw-mobile-toggle"
+            aria-label="Toggle menu"
+        >
+            <span class="jw-icon-burger"></span>
+        </button>
+    </div>
+            <header class="header-wrap js-topbar-content-container js-fixed-header-container">
+        <div class="header-wrap__inner">
+        <div class="header">
+            <div class="jw-header-logo">
+            <div
+    id="jw-header-image-container"
+    class="jw-header jw-header-image jw-header-image-toggle"
+    style="flex-basis: 172px; max-width: 172px; flex-shrink: 1;"
+>
+        <img id="jw-header-image" data-image-id="127412693" srcset="https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/mie-image-high.png?enable-io=true&amp;enable=upscale&amp;width=172 172w, https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/mie-image-high.png?enable-io=true&amp;enable=upscale&amp;width=344 344w" class="jw-header-image" title="Plugin-Tutorial-Node-CLI" style="" sizes="172px" width="172" height="43" intrinsicsize="172.00 x 43.00" alt="Plugin-Tutorial-Node-CLI" />        </div>
+        <div
+    class="jw-header jw-header-title-container jw-header-text jw-header-text-toggle"
+    data-stylable="true"
+>
+    <h1        id="jw-header-title"
+        class="jw-header-title"
+            >
+        Plugin-Tutorial-Node-CLI    </h1>
+</div>
+</div>
+        </div>
+        <nav class="menu jw-menu-copy">
+            <ul
+    id="jw-menu"
+    class="jw-menu jw-menu-horizontal"
+            >
+            <li
+    class="jw-menu-item jw-menu-is-active"
+>
+        <a
+        class="jw-menu-link js-active-menu-item"
+        href="index.html"
+                                            data-page-link-id="22586647"
+                            >
+                <span class="">
+            Home        </span>
+            </a>
+                </li>
+    
+    </ul>
+
+    <script nonce="be8ca30f0b47f2584be1a23266e648f9" id="jw-mobile-menu-template" type="text/template">
+        <ul id="jw-menu" class="jw-menu jw-menu-horizontal">
+                            <li
+    class="jw-menu-item jw-menu-is-active"
+>
+        <a
+        class="jw-menu-link js-active-menu-item"
+        href="index.html"
+                                            data-page-link-id="22586647"
+                            >
+                <span class="">
+            Home        </span>
+            </a>
+                </li>
+            
+                    </ul>
+    </script>
+        </nav>
+    </div>
+</header>
+<script nonce="be8ca30f0b47f2584be1a23266e648f9">
+    JOUWWEB.templateConfig = {
+        header: {
+            selector: '.header-wrap__inner',
+            mobileSelector: '.jw-mobile-menu',
+            updatePusher: function (topHeight) {
+                var $sliderStyle = $('#sliderStyle');
+
+                if ($sliderStyle.length === 0) {
+                    $sliderStyle = $('<style />')
+                        .attr('id', 'sliderStyle')
+                        .appendTo(document.body);
+                }
+
+                // Header height without mobile bar
+                var headerHeight = $('.header-wrap__inner').outerHeight();
+
+                var paddingTop = topHeight;
+                var paddingBottom = Math.min(headerHeight * (2/3), 60);
+                $sliderStyle.html(
+                    '.jw-slideshow-slide-content {' +
+                    '    padding-top: ' + paddingTop + 'px;' +
+                    '    padding-bottom: ' + paddingBottom + 'px;' +
+                    '}' +
+                    '.bx-controls-direction {' +
+                    '    margin-top: ' + ((paddingTop - paddingBottom) / 2) + 'px;' +
+                    '}'
+                );
+
+                // make sure slider also gets correct height (because of the added padding)
+                $('.jw-slideshow-slide[aria-hidden=false]').each(function (index) {
+                    var $this = $(this);
+                    topHeight = $this.outerHeight() > topHeight ? $this.outerHeight() : topHeight;
+                    $this.closest('.bx-viewport').css({
+                        height: topHeight + 'px',
+                    });
+                });
+
+                // If a page has a message-bar, offset the mobile nav.
+                const $messageBar = $('.message-bar');
+                if ($messageBar.length > 0) {
+                    $('.js-mobile-menu, .jw-menu-clone').css('top', $messageBar.offset().top + $messageBar.outerHeight());
+                }
+            },
+        },
+        mainContentOffset: function () {
+            const $body = $('body');
+
+            function measureAffixedHeaderHeight() {
+                const $headerWrap = $('.header-wrap');
+                const $headerWrapInner = $('.header-wrap__inner');
+
+                // Early return if header is already affixed
+                if ($body.hasClass('jw-is-header-affix')) {
+                    return $headerWrap.height();
+                }
+
+                // Switch to affixed header (without transition)
+                $headerWrapInner.css('transition', 'none');
+                $body.addClass('jw-is-header-affix');
+
+                // Measure affixed header height
+                const headerHeight = $headerWrap.height();
+
+                // Switch back to unaffixed header (without transition)
+                $body.removeClass('jw-is-header-affix');
+                $headerWrap.height(); // force reflow
+                $headerWrapInner.css('transition', '');
+
+                return headerHeight;
+            }
+
+            const headerHeight = measureAffixedHeaderHeight();
+            return $('.main-content').offset().top - ($body.hasClass('jw-menu-is-mobile') ? 0 : headerHeight);
+        },
+    };
+</script>
+<div class="main-content">
+    
+<main class="block-content">
+    <div data-section-name="content" class="jw-section jw-section-content jw-responsive">
+        <div
+    id="jw-element-373148804"
+    data-jw-element-id="373148804"
+        class="jw-tree-node jw-element jw-strip-root jw-tree-container"
+>
+    <div
+    id="jw-element-373149247"
+    data-jw-element-id="373149247"
+        class="jw-tree-node jw-element jw-strip jw-tree-container jw-strip--default jw-strip--style-color jw-strip--color-default jw-strip--padding-both jw-node-is-first-child jw-strip--primary"
+>
+    <div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive" >
+                    <div
+    id="jw-element-373149248"
+    data-jw-element-id="373149248"
+        class="jw-tree-node jw-element jw-image-text jw-node-is-first-child"
+>
+    <div class="jw-element-imagetext-text">
+            <h1 class="jw-heading-130" style="text-align: center;">&nbsp;Plugin-System Tutorial</h1>
+<p style="text-align: center;">- Arshpreet Singh Sandhu | Purdue University</p>
+<p style="text-align: center;">Connect with me on <a data-jwlink-type="extern" data-jwlink-identifier="https://www.linkedin.com/in/arsh2912" href="https://www.linkedin.com/in/arsh2912" data-jwlink-readonly="false">LinkedIN </a>and <a data-jwlink-type="extern" data-jwlink-identifier="https://github.com/ArshSSandhu" href="https://github.com/ArshSSandhu" data-jwlink-readonly="false" target="_blank" rel="noopener">Github</a></p>    </div>
+</div><div
+    id="jw-element-373152107"
+    data-jw-element-id="373152107"
+        class="jw-tree-node jw-element jw-image-text jw-node-is-last-child"
+>
+    <div class="jw-element-imagetext-text">
+            <p style="text-align: justify;">Welcome to the Node.js CLI Plugin Tutorial! This tutorial will guide you through the process of creating and registering custom plugins in the Node.js CLI text transformation application. By following these steps, you will learn how to extend the functionality of the CLI app with ease. Whether you're a beginner or an experienced developer, this tutorial will help you get started with plugin development.</p>    </div>
+</div></div></div></div><div
+    id="jw-element-373153442"
+    data-jw-element-id="373153442"
+        class="jw-tree-node jw-element jw-strip jw-tree-container jw-strip--wide jw-strip--style-color jw-strip--color-default jw-strip--padding-both"
+>
+    <div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive" ><div
+    id="jw-element-373153443"
+    data-jw-element-id="373153443"
+        class="jw-tree-node jw-element jw-image-text jw-node-is-first-child"
+>
+    <div class="jw-element-imagetext-text">
+            <h2 class="jw-heading-100" style="text-align: left;">Step 1 - Set Up the Project</h2>    </div>
+</div><div
+    id="jw-element-373153444"
+    data-jw-element-id="373153444"
+        class="jw-tree-node jw-element jw-image-text"
+>
+    <div class="jw-element-imagetext-text">
+            <p>Before we begin, let's make sure you have the base project set up. Clone this github repository and follow the instructions given on the README to run it on your local machine. Link to the repository - <a data-jwlink-type="extern" data-jwlink-identifier="https://github.com/ArshSSandhu/Nodejs-cli-plugin-system" data-jwlink-title="" href="https://github.com/ArshSSandhu/Nodejs-cli-plugin-system">Node-CLI-Plugin-System</a></p>    </div>
+</div><div
+    id="jw-element-373153740"
+    data-jw-element-id="373153740"
+        class="jw-tree-node jw-element jw-image-text"
+>
+    <div class="jw-element-imagetext-text">
+            <h2 class="jw-heading-100">Step 2 - Create Plugin File</h2>    </div>
+</div><div
+    id="jw-element-373153762"
+    data-jw-element-id="373153762"
+        class="jw-tree-node jw-element jw-image-text"
+>
+    <div class="jw-element-imagetext-text">
+            <p style="text-align: left;">A)&nbsp;<strong>Create a New File</strong>:</p>
+<p>Create a new file named alphabetCountPlugin.ts in your plugins directory.</p>
+<p>B)&nbsp;<strong>Implement the Plugin</strong>:</p>
+<p>In this file, you'll implement the TextPlugin interface and define the transformText method. This method will contain the logic to count the alphabets in the input text.&nbsp;</p>
+<p>An example is provided below.</p>    </div>
+</div><div
+    id="jw-element-373154133"
+    data-jw-element-id="373154133"
+        class="jw-tree-node jw-element jw-image"
+>
+    <div
+    class="jw-intent jw-element-image jw-element-child jw-element-content jw-element-activeless jw-element-no-margin  jw-element-image-is-center jw-element-image--full-width-to-640"
+            style="width: 664px;"
+        data-high-res-path="../primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/pasted-image-thu-aug-01-2024-02-08-22-gmt-0400-eastern-daylight-time-high.png"
+>
+                        <picture
+            class="jw-element-image__image-wrapper jw-image-is-square jw-intrinsic"
+            style="padding-top: 46.385542168675%;"
+        >
+                            <img
+                    class="jw-element-image__image jw-intrinsic__item"
+                    width="664"
+                    height="308"
+                    alt=""
+                    src="../primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/pasted-image-thu-aug-01-2024-02-08-22-gmt-0400-eastern-daylight-time-standard.png"
+                    srcset="https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/pasted-image-thu-aug-01-2024-02-08-22-gmt-0400-eastern-daylight-time-standard.png 664w, https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/pasted-image-thu-aug-01-2024-02-08-22-gmt-0400-eastern-daylight-time-standard.png 664w"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1391px) 100vw, 664px"
+                    loading="lazy"
+                />
+                    </picture>
+        </div>
+</div><div
+    id="jw-element-373154624"
+    data-jw-element-id="373154624"
+        class="jw-tree-node jw-element jw-image-text"
+>
+    <div class="jw-element-imagetext-text">
+            <h2 class="jw-heading-100">Step 3 - Surprise! Your plugin is already registered</h2>    </div>
+</div><div
+    id="jw-element-373155535"
+    data-jw-element-id="373155535"
+        class="jw-tree-node jw-element jw-image-text"
+>
+    <div class="jw-element-imagetext-text">
+            <p>Congratulations ! You've successfully created and registered your plugin</p>
+<p>Here's how the system finds and registers your plugin</p>    </div>
+</div><div
+    id="jw-element-373154746"
+    data-jw-element-id="373154746"
+        class="jw-tree-node jw-element jw-image-text"
+>
+    <div class="jw-element-imagetext-text">
+            <p>&nbsp;</p>
+<ul>
+<li>
+<p><strong>Setup</strong>: The code initializes a PluginManager and defines the path to the plugins directory where all plugin files are stored.</p>
+</li>
+<li>
+<p><strong>Registering Plugins</strong>: It reads all .js files in the plugins directory, extracting each file's name and registering it with the PluginManager. Each plugin is identified by its name and relative path.</p>
+</li>
+<li>
+<p><strong>Running the CLI</strong>: A TextCLI instance is created with the registered plugins, and cli.displayPrompt() starts the CLI, allowing users to interact with and apply text transformations using the available plugins.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>    </div>
+</div><div
+    id="jw-element-395351857"
+    data-jw-element-id="395351857"
+        class="jw-tree-node jw-element jw-image jw-node-is-last-child"
+>
+    <div
+    class="jw-intent jw-element-image jw-element-child jw-element-content jw-element-activeless jw-element-no-margin  jw-element-image-is-center jw-element-image--full-width-to-640"
+            style="width: 647px;"
+        data-high-res-path="../primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/snip1-high.png"
+>
+                        <picture
+            class="jw-element-image__image-wrapper jw-image-is-square jw-intrinsic"
+            style="padding-top: 83.925811437403%;"
+        >
+                            <img
+                    class="jw-element-image__image jw-intrinsic__item"
+                    width="647"
+                    height="543"
+                    alt=""
+                    src="../primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/snip1-standard.png"
+                    srcset="https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/snip1-standard.png 647w, https://primary.jwwb.nl/public/y/r/b/temp-fjnargaqiagjydzrcslc/snip1-standard.png 647w"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1391px) 100vw, 647px"
+                    loading="lazy"
+                />
+                    </picture>
+        </div>
+</div></div></div></div><div
+    id="jw-element-373149249"
+    data-jw-element-id="373149249"
+        class="jw-tree-node jw-element jw-strip jw-tree-container jw-strip--wide jw-strip--style-color jw-strip--color-shaded jw-strip--padding-both"
+>
+    <div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive" ><div
+    id="jw-element-373149250"
+    data-jw-element-id="373149250"
+        class="jw-tree-node jw-element jw-image-text jw-node-is-first-child"
+>
+    <div class="jw-element-imagetext-text">
+            <h2 class="jw-heading-100" style="text-align: center;">PRO TIPS</h2>    </div>
+</div><div
+    id="jw-element-373149251"
+    data-jw-element-id="373149251"
+        class="jw-tree-node jw-element jw-accordion jw-node-is-last-child"
+>
+    
+<div class="jw-element-accordion jw-element-accordion--style-box jw-element-accordion--align-icon-right jw-element-accordion--single-open">
+            <details class="jw-element-accordion__item" open>
+            <summary class="
+                jw-element-accordion__heading
+                jw-element-accordion__heading--icon-triangle            ">
+                <i class="jw-element-accordion__icon website-rendering-icon-right-open"></i>
+                <h3 >What to do after registering the plugin?</h3>            </summary>
+            <div class="jw-element-accordion__content">
+                <div class="jw-element-accordion__content-wrap">
+                    <p>On your terminal, navigate to the src or root directory where your typescript files are and enter 'npx tsc' . Then navigate to the directory where your javascript files are transpiled and run the project using 'node index.js' .&nbsp;<br /><br /></p>
+<p>&nbsp;</p>                </div>
+            </div>
+        </details>
+            <details class="jw-element-accordion__item" >
+            <summary class="
+                jw-element-accordion__heading
+                jw-element-accordion__heading--icon-triangle            ">
+                <i class="jw-element-accordion__icon website-rendering-icon-right-open"></i>
+                <h3 >I built a plugin? What next?</h3>            </summary>
+            <div class="jw-element-accordion__content">
+                <div class="jw-element-accordion__content-wrap">
+                    <p>Create a pull request and contribute to the github repository given above. Think of more creative plugins and enjoy building.</p>                </div>
+            </div>
+        </details>
+            <details class="jw-element-accordion__item" >
+            <summary class="
+                jw-element-accordion__heading
+                jw-element-accordion__heading--icon-triangle            ">
+                <i class="jw-element-accordion__icon website-rendering-icon-right-open"></i>
+                <h3 >How can we connect?</h3>            </summary>
+            <div class="jw-element-accordion__content">
+                <div class="jw-element-accordion__content-wrap">
+                    <p>Connect with me on LinkedIN/ Github and send me a dm.</p>                </div>
+            </div>
+        </details>
+    </div>
+</div></div></div></div><div
+    id="jw-element-373149252"
+    data-jw-element-id="373149252"
+        class="jw-tree-node jw-element jw-strip jw-tree-container jw-strip--wide jw-strip--style-color jw-strip--color-accent jw-strip--padding-both"
+>
+    <div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive" ><div
+    id="jw-element-373149253"
+    data-jw-element-id="373149253"
+        class="jw-tree-node jw-element jw-image-text jw-node-is-first-child"
+>
+    <div class="jw-element-imagetext-text">
+            <h3 class="jw-heading-70" style="text-align: center;">&ldquo;A Heartfelt Thank You to Medical Informatics Engineering, Fort Wayne&rdquo;</h3>    </div>
+</div><div
+    id="jw-element-373156782"
+    data-jw-element-id="373156782"
+        class="jw-tree-node jw-element jw-image-text jw-node-is-last-child"
+>
+    <div class="jw-element-imagetext-text">
+            <p>I would like to extend my deepest gratitude to Medical Informatics Engineering, Fort Wayne, for providing me with the incredible opportunity to intern with such a forward-thinking and innovative company. This project, along with many others during my internship, has been a transformative experience for me.</p>
+<p>A special thank you to our esteemed CEO, Doug Horner, whose unwavering guidance and support have been instrumental in my development. Doug's mentorship has not only helped me hone my technical skills but has also inspired me to contribute to open source projects and strive for excellence in all my endeavors.</p>    </div>
+</div></div></div></div><div
+    id="jw-element-373149254"
+    data-jw-element-id="373149254"
+        class="jw-tree-node jw-element jw-strip jw-tree-container jw-strip--narrow jw-strip--style-color jw-strip--color-accent jw-strip--padding-both"
+>
+    <div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive lt540 lt600 lt640 lt800" ><div
+    id="jw-element-373149255"
+    data-jw-element-id="373149255"
+        class="jw-tree-node jw-element jw-image-text jw-node-is-first-child jw-node-is-last-child"
+>
+    <div class="jw-element-imagetext-text">
+            <h2 class="jw-heading-100" style="text-align: center;">About Me&nbsp;</h2>
+<p style="text-align: center;">Visit my personal website to know more about me - <a data-jwlink-type="extern" data-jwlink-identifier="https://arshssandhu.github.io/" data-jwlink-title="" target="_blank" href="https://arshssandhu.github.io/" rel="noopener">link</a></p>    </div>
+</div></div></div></div><div
+    id="jw-element-373158071"
+    data-jw-element-id="373158071"
+        class="jw-tree-node jw-element jw-strip jw-tree-container jw-strip--wide jw-strip--style-color jw-strip--color-default jw-strip--padding-both jw-node-is-last-child"
+>
+    <div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive" ><div
+    id="jw-element-373158109"
+    data-jw-element-id="373158109"
+        class="jw-tree-node jw-element jw-comments jw-node-is-first-child"
+>
+    <div class="jw-comment-module" data-container-id="373158109">
+            <div class="jw-comment-form-container">
+            <h2>Add comment</h2>
+            <div class="jw-comment-form jw-form-container" data-parent-id="0">
+    <form method="POST" >        <div class="jw-element-form-error jw-comment-error"></div>
+        <div class="jw-element-form-group" ><label for="name" class="jw-element-form-label">Name *</label><div class="jw-element-form-content" ><input type="text" name="name" id="name" maxlength="100" class="form-control&#x20;jw-element-form-input-text" value=""></div></div>        <div class="jw-element-form-group" ><label for="email" class="jw-element-form-label">Email address *</label><div class="jw-element-form-content" ><input type="text" name="email" id="email" maxlength="200" class="form-control&#x20;jw-element-form-input-text" value=""></div></div>        <div class="jw-element-form-group" ><label for="body" class="jw-element-form-label">Message *</label><div class="jw-element-form-content" ><textarea name="body" id="body" maxlength="5000" class="form-control&#x20;jw-element-form-input-text"></textarea></div></div>        <div class="hidden" ><label for="captcha" class="jw-element-form-label">Leave this field empty *</label><div class="jw-element-form-content" ><input type="text" name="captcha" id="captcha" class="form-control&#x20;jw-element-form-input-text" value=""></div></div>                                    <input type="hidden" name="captcha-response" data-sitekey="6Lf2k5ApAAAAAHnwq8755XMiirIOTY2Cw_UdHdfa" data-action="COMMENT" data-checkbox="1" id="jwFormkXKV5o_captcha-response" value="">        <div class="jw-element-form-group captcha-form-group hidden">
+            <div class="jw-element-form-offset">
+                <div class="captcha-widget" data-sitekey="6Lf2k5ApAAAAAHnwq8755XMiirIOTY2Cw_UdHdfa" data-action="COMMENT"></div>                            </div>
+        </div>
+            <input type="hidden" name="comment-csrf-373158109-main" id="jwFormTlCOM5_comment-csrf-373158109-main" value="9Lik2UXpFdmEW9VX">        <input type="hidden" name="action" id="jwFormaJvtch_action" value="new-comment">        <input type="hidden" name="element" id="jwFormE5DiFm_element" value="373158109">                <div class="jw-element-form-group" ><div class="jw-element-form-content jw-element-form-offset" ><button type="submit" name="submit" id="jwFormbTUklE_submit" class="jw-btn jw-btn--size-small">Submit comment</button></div></div>    </form></div>
+        </div>
+        <div
+        class="jw-comments-container "
+        data-number-of-comments="0"
+        data-comments-per-page="10"
+    >
+        <h2>Comments</h2>
+        <div class="jw-comments jw-comments-real">
+                            <div>There are no comments yet.</div>
+                    </div>
+            </div>
+    </div>
+</div><div
+    id="jw-element-373158132"
+    data-jw-element-id="373158132"
+        class="jw-tree-node jw-element jw-rating jw-node-is-last-child"
+>
+                        
+<div style="text-align: left" class="jw-element-rating-content jw-element-rating--color-yellow jw-element-rating--size-32 jw-element-rating--voting-enabled">
+            <form action="#">
+        <div class="sr-only">
+        Rating: 5 stars    </div>
+    <div class="jw-element-rating__stars">
+                                                <input
+                    value="1"
+                    type="radio"
+                    id="rating-373158132-1"
+                    name="vote"
+                    class="sr-only"
+                                    >
+                <label for="rating-373158132-1" title="1 star" class="jw-element-rating__star jw-element-rating__star--full">
+                    <span class="sr-only">1 star</span>
+                    <i class="website-rendering-icon-star jw-element-rating__icon-full"></i><i class="website-rendering-icon-star-empty jw-element-rating__icon-empty"></i>
+                </label>
+                                                            <input
+                    value="2"
+                    type="radio"
+                    id="rating-373158132-2"
+                    name="vote"
+                    class="sr-only"
+                                    >
+                <label for="rating-373158132-2" title="2 stars" class="jw-element-rating__star jw-element-rating__star--full">
+                    <span class="sr-only">2 stars</span>
+                    <i class="website-rendering-icon-star jw-element-rating__icon-full"></i><i class="website-rendering-icon-star-empty jw-element-rating__icon-empty"></i>
+                </label>
+                                                            <input
+                    value="3"
+                    type="radio"
+                    id="rating-373158132-3"
+                    name="vote"
+                    class="sr-only"
+                    checked                >
+                <label for="rating-373158132-3" title="3 stars" class="jw-element-rating__star jw-element-rating__star--full">
+                    <span class="sr-only">3 stars</span>
+                    <i class="website-rendering-icon-star jw-element-rating__icon-full"></i><i class="website-rendering-icon-star-empty jw-element-rating__icon-empty"></i>
+                </label>
+                                                            <input
+                    value="4"
+                    type="radio"
+                    id="rating-373158132-4"
+                    name="vote"
+                    class="sr-only"
+                                    >
+                <label for="rating-373158132-4" title="4 stars" class="jw-element-rating__star jw-element-rating__star--full">
+                    <span class="sr-only">4 stars</span>
+                    <i class="website-rendering-icon-star jw-element-rating__icon-full"></i><i class="website-rendering-icon-star-empty jw-element-rating__icon-empty"></i>
+                </label>
+                                                            <input
+                    value="5"
+                    type="radio"
+                    id="rating-373158132-5"
+                    name="vote"
+                    class="sr-only"
+                                    >
+                <label for="rating-373158132-5" title="5 stars" class="jw-element-rating__star jw-element-rating__star--full">
+                    <span class="sr-only">5 stars</span>
+                    <i class="website-rendering-icon-star jw-element-rating__icon-full"></i><i class="website-rendering-icon-star-empty jw-element-rating__icon-empty"></i>
+                </label>
+                        </div>
+                <button type="submit" class="sr-only" tabindex="-1">Submit rating</button>
+        </form>
+            <span class="jw-element-rating__text jw-element-rating__text--summary">
+        1 vote    </span>
+    <span class="jw-element-rating__text jw-element-rating__text--already-voted" style="display: none;">
+        You have already voted.    </span>
+</div>
+</div></div></div></div></div>        <div class="jw-strip jw-strip--default jw-strip--style-color jw-strip--color-default jw-strip--padding-both" ><div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive" >    <div
+        class="jw-element-ads js-ads jw-element-ads-WebsiteRenderingSignup jw-element-ads--tint jw-element-ads--logo"
+    >
+        <div class="jw-comment">
+            <h3>
+                Create Your Own Website With <a href="https://www.webador.com/?utm_source=sites&amp;utm_medium=banner&amp;utm_content=logo%2Btint&amp;utm_campaign=house%20banner%20webador" rel="nofollow"><span class="sr-only">Webador</span><svg xmlns="http://www.w3.org/2000/svg" width="150" height="32" fill="none"><path fill="#FFC814" fill-rule="evenodd" d="M26.7031 27.8932C25.0458 28.3613 23.2972 28.6118 21.4901 28.6118C17.8893 28.6118 14.5207 27.6173 11.644 25.8879C19.9275 22.0923 26.0947 14.475 27.8892 5.2926C30.4445 8.12812 31.9999 11.8824 31.9999 16C31.9999 20.7211 29.9552 24.9646 26.7031 27.8932Z" clip-rule="evenodd"/><path fill="#479FD6" fill-rule="evenodd" d="M27.8931 5.29691C28.3612 6.95416 28.6117 8.70271 28.6117 10.5098C28.6117 14.1107 27.6172 17.4793 25.8878 20.3559C22.0922 12.0725 14.4749 5.90522 5.29248 4.11071C8.12803 1.5554 11.8823 1.79984e-07 15.9999 0C20.721 -2.06369e-07 24.9645 2.04472 27.8931 5.29691Z" clip-rule="evenodd"/><path fill="#ED1C24" fill-rule="evenodd" d="M5.29688 4.10677C6.95413 3.63866 8.70271 3.38818 10.5098 3.38818C14.1107 3.38818 17.4793 4.38269 20.3559 6.11204C12.0725 9.90768 5.90519 17.525 4.11071 26.7074C1.5554 23.8719 1.79987e-07 20.1175 0 15.9999C-2.06362e-07 11.2789 2.04472 7.0354 5.29688 4.10677Z" clip-rule="evenodd"/><path fill="#8CC63F" fill-rule="evenodd" d="M4.10677 26.7032C3.63866 25.0459 3.38818 23.2973 3.38818 21.4903C3.38818 17.8894 4.38269 14.5208 6.11204 11.6442C9.90768 19.9276 17.525 26.0949 26.7074 27.8893C23.8719 30.4447 20.1175 32.0001 15.9999 32.0001C11.2789 32.0001 7.0354 29.9553 4.10677 26.7032Z" clip-rule="evenodd"/><path fill="#FFC814" fill-rule="evenodd" d="M20.0628 20.0128C17.6466 22.4424 14.7988 24.4423 11.644 25.8878C14.5207 27.6172 17.8893 28.6117 21.4901 28.6117C23.2972 28.6117 25.0458 28.3612 26.7031 27.8931C27.2335 27.4154 27.7318 26.9028 28.1944 26.3588L20.0628 20.0128Z" clip-rule="evenodd"/><path fill="url(#a)" fill-rule="evenodd" d="M14.9572 3.90759C16.8864 4.36673 18.7024 5.11798 20.3559 6.11198C15.5955 8.29329 11.534 11.7367 8.59972 16.0141C7.649 14.6395 6.81499 13.1781 6.11206 11.644C8.16762 8.22474 11.2614 5.50057 14.9572 3.90759Z" clip-rule="evenodd"/><path fill="url(#b)" fill-rule="evenodd" d="M28.0923 14.9572C27.6332 16.8864 26.8819 18.7024 25.8879 20.3559C23.7066 15.5955 20.2632 11.534 15.9858 8.59972C17.3604 7.64897 18.8218 6.81499 20.3559 6.11206C23.7752 8.16762 26.4993 11.2614 28.0923 14.9572Z" clip-rule="evenodd"/><path fill="url(#c)" fill-rule="evenodd" d="M17.0427 28.0922C15.1135 27.633 13.2975 26.8818 11.644 25.8878C16.4044 23.7065 20.4659 20.263 23.4002 15.9857C24.3509 17.3603 25.1849 18.8217 25.8878 20.3558C23.8323 23.775 20.7385 26.4992 17.0427 28.0922Z" clip-rule="evenodd"/><path fill="url(#d)" fill-rule="evenodd" d="M3.90771 17.0428C4.36685 15.1136 5.1181 13.2976 6.11211 11.6442C8.29338 16.4045 11.7369 20.466 16.0142 23.4003C14.6396 24.351 13.1782 25.185 11.6441 25.888C8.22486 23.8324 5.50069 20.7386 3.90771 17.0428Z" clip-rule="evenodd"/><path fill="currentColor" d="M55.416 23.5L59.532 9.976H55.836L53.316 19.076L50.348 9.976H47.184L44.216 19.076L41.696 9.976H38L42.116 23.5H45.924L48.78 14.288L51.636 23.5H55.416ZM67.6395 23.836C69.7395 23.836 71.8675 23.192 73.2115 21.96L71.6435 19.664C70.7755 20.504 69.1795 21.008 68.0315 21.008C65.7355 21.008 64.3635 19.58 64.1395 17.872H74.1915V17.088C74.1915 12.664 71.4475 9.64 67.4155 9.64C63.2995 9.64 60.4155 12.804 60.4155 16.724C60.4155 21.064 63.5235 23.836 67.6395 23.836ZM70.7475 15.464H64.0835C64.2515 14.12 65.2035 12.468 67.4155 12.468C69.7675 12.468 70.6635 14.176 70.7475 15.464ZM80.3161 19.16V14.372C80.9041 13.476 82.2201 12.804 83.3681 12.804C85.4401 12.804 86.8121 14.4 86.8121 16.752C86.8121 19.104 85.4401 20.672 83.3681 20.672C82.2201 20.672 80.9041 20.028 80.3161 19.16ZM80.3161 23.5V21.764C81.3801 23.108 82.8641 23.836 84.4881 23.836C87.9041 23.836 90.4801 21.26 90.4801 16.752C90.4801 12.328 87.9321 9.64 84.4881 9.64C82.8921 9.64 81.3801 10.34 80.3161 11.712V4.824H76.7601V23.5H80.3161ZM104.842 23.5V14.764C104.842 10.872 102.014 9.64 98.9343 9.64C96.8063 9.64 94.6783 10.312 93.0263 11.768L94.3703 14.148C95.5183 13.084 96.8623 12.552 98.3183 12.552C100.11 12.552 101.286 13.448 101.286 14.82V16.64C100.39 15.576 98.7943 14.988 97.0023 14.988C94.8463 14.988 92.2983 16.192 92.2983 19.356C92.2983 22.38 94.8463 23.836 97.0023 23.836C98.7663 23.836 100.362 23.192 101.286 22.1V23.5H104.842ZM98.4303 21.428C97.0303 21.428 95.8823 20.7 95.8823 19.44C95.8823 18.124 97.0303 17.396 98.4303 17.396C99.5783 17.396 100.698 17.788 101.286 18.572V20.252C100.698 21.036 99.5783 21.428 98.4303 21.428ZM121.249 23.5V4.824H117.665V11.712C116.601 10.34 115.089 9.64 113.493 9.64C110.049 9.64 107.501 12.328 107.501 16.752C107.501 21.26 110.077 23.836 113.493 23.836C115.117 23.836 116.601 23.108 117.665 21.764V23.5H121.249ZM114.585 20.672C112.569 20.672 111.169 19.076 111.169 16.752C111.169 14.4 112.569 12.804 114.585 12.804C115.789 12.804 117.077 13.448 117.665 14.344V19.132C117.077 20.028 115.789 20.672 114.585 20.672ZM131.048 23.836C135.528 23.836 138.216 20.588 138.216 16.724C138.216 12.888 135.528 9.64 131.048 9.64C126.596 9.64 123.908 12.888 123.908 16.724C123.908 20.588 126.596 23.836 131.048 23.836ZM131.048 20.672C128.836 20.672 127.604 18.852 127.604 16.724C127.604 14.624 128.836 12.804 131.048 12.804C133.26 12.804 134.52 14.624 134.52 16.724C134.52 18.852 133.26 20.672 131.048 20.672ZM144.41 23.5V14.568C144.998 13.7 146.566 13.028 147.742 13.028C148.134 13.028 148.47 13.056 148.722 13.112V9.64C147.042 9.64 145.362 10.62 144.41 11.824V9.976H140.854V23.5H144.41Z"/><defs><linearGradient id="a" x1="16.456" x2="7.867" y1="5.979" y2="15.009" gradientUnits="userSpaceOnUse"><stop stop-color="#ED1C24"/><stop offset=".348" stop-color="#EA1B23"/><stop offset=".557" stop-color="#E2171E"/><stop offset=".73" stop-color="#D41116"/><stop offset=".882" stop-color="#C0090C"/><stop offset="1" stop-color="#A00"/></linearGradient><linearGradient id="b" x1="25.998" x2="17.408" y1="16.647" y2="7.837" gradientUnits="userSpaceOnUse"><stop stop-color="#479FD6"/><stop offset=".393" stop-color="#459DD3"/><stop offset=".629" stop-color="#3E95CB"/><stop offset=".823" stop-color="#3388BD"/><stop offset=".995" stop-color="#2476A9"/><stop offset="1" stop-color="#2375A8"/></linearGradient><linearGradient id="c" x1="16.372" x2="23.861" y1="25.853" y2="16.162" gradientUnits="userSpaceOnUse"><stop stop-color="#FFC814"/><stop offset=".348" stop-color="#FEC513"/><stop offset=".557" stop-color="#FABD11"/><stop offset=".73" stop-color="#F4AF0C"/><stop offset=".882" stop-color="#EC9B06"/><stop offset="1" stop-color="#E38500"/></linearGradient><linearGradient id="d" x1="6.094" x2="15.234" y1="15.915" y2="24.064" gradientUnits="userSpaceOnUse"><stop stop-color="#8CC63F"/><stop offset=".38" stop-color="#8AC33D"/><stop offset=".609" stop-color="#82BB37"/><stop offset=".797" stop-color="#75AD2C"/><stop offset=".963" stop-color="#63991D"/><stop offset="1" stop-color="#5E9319"/></linearGradient></defs></svg>
+</a>            </h3>
+        </div>
+            </div>
+</div></div></div>    </div>
+</main>
+    </div>
+<footer class="block-footer">
+    <div
+        data-section-name="footer"
+        class="jw-section jw-section-footer jw-responsive"
+    >
+                <div class="jw-strip jw-strip--default jw-strip--style-color jw-strip--primary jw-strip--color-default jw-strip--padding-both" ><div class="jw-strip__content-container"><div class="jw-strip__content jw-responsive" >            <div
+    id="jw-element-373148803"
+    data-jw-element-id="373148803"
+        class="jw-tree-node jw-element jw-simple-root jw-tree-container jw-tree-container--empty"
+>
+    </div>                            <div class="jw-credits clear">
+                    <div class="jw-credits-owner">
+                        <div id="jw-footer-text">
+                            <div class="jw-footer-text-content">
+                                &copy; 2024 Plugin-Tutorial-Node-CLI                            </div>
+                        </div>
+                    </div>
+                    <div class="jw-credits-right">
+                                                <div id="jw-credits-tool">
+    <small>
+        Powered by <a href="https://www.webador.com/" rel="">Webador</a>    </small>
+</div>
+                    </div>
+                </div>
+                    </div></div></div>    </div>
+</footer>
+            
+            <div class="jw-bottom-bar__container"></div>
+            <div class="jw-bottom-bar__spacer"></div>
+                    <div id="jw-variable-loaded" style="display: none;"></div>
+            <div id="jw-variable-values" style="display: none;">
+                                    <span data-jw-variable-key="background-color" class="jw-variable-value-background-color"></span>
+                                    <span data-jw-variable-key="background" class="jw-variable-value-background"></span>
+                                    <span data-jw-variable-key="font-family" class="jw-variable-value-font-family"></span>
+                                    <span data-jw-variable-key="paragraph-color" class="jw-variable-value-paragraph-color"></span>
+                                    <span data-jw-variable-key="paragraph-link-color" class="jw-variable-value-paragraph-link-color"></span>
+                                    <span data-jw-variable-key="paragraph-font-size" class="jw-variable-value-paragraph-font-size"></span>
+                                    <span data-jw-variable-key="heading-color" class="jw-variable-value-heading-color"></span>
+                                    <span data-jw-variable-key="heading-link-color" class="jw-variable-value-heading-link-color"></span>
+                                    <span data-jw-variable-key="heading-font-size" class="jw-variable-value-heading-font-size"></span>
+                                    <span data-jw-variable-key="heading-font-family" class="jw-variable-value-heading-font-family"></span>
+                                    <span data-jw-variable-key="menu-text-color" class="jw-variable-value-menu-text-color"></span>
+                                    <span data-jw-variable-key="menu-text-link-color" class="jw-variable-value-menu-text-link-color"></span>
+                                    <span data-jw-variable-key="menu-text-font-size" class="jw-variable-value-menu-text-font-size"></span>
+                                    <span data-jw-variable-key="menu-font-family" class="jw-variable-value-menu-font-family"></span>
+                                    <span data-jw-variable-key="menu-capitalize" class="jw-variable-value-menu-capitalize"></span>
+                                    <span data-jw-variable-key="website-size" class="jw-variable-value-website-size"></span>
+                                    <span data-jw-variable-key="footer-text-color" class="jw-variable-value-footer-text-color"></span>
+                                    <span data-jw-variable-key="footer-text-link-color" class="jw-variable-value-footer-text-link-color"></span>
+                                    <span data-jw-variable-key="footer-text-font-size" class="jw-variable-value-footer-text-font-size"></span>
+                                    <span data-jw-variable-key="content-color" class="jw-variable-value-content-color"></span>
+                                    <span data-jw-variable-key="header-color" class="jw-variable-value-header-color"></span>
+                                    <span data-jw-variable-key="accent-color" class="jw-variable-value-accent-color"></span>
+                                    <span data-jw-variable-key="footer-color" class="jw-variable-value-footer-color"></span>
+                                    <span data-jw-variable-key="menu-text-over-banner-color" class="jw-variable-value-menu-text-over-banner-color"></span>
+                            </div>
+        </div>
+                            <script nonce="be8ca30f0b47f2584be1a23266e648f9" type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/free-5345802.webadorsite.com\/","name":"Plugin-Tutorial-Node-CLI","logo":{"@type":"ImageObject","url":"https:\/\/primary.jwwb.nl\/public\/y\/r\/b\/temp-fjnargaqiagjydzrcslc\/mie-image-high.png?enable-io=true&enable=upscale&height=60","width":239,"height":60}}]</script>
+                <script nonce="be8ca30f0b47f2584be1a23266e648f9">window.JOUWWEB = window.JOUWWEB || {}; window.JOUWWEB.experiment = {"enrollments":{},"defaults":{"constrained-subdomain":"on","chosen-features-deflect-free-modal":"on","page-list-suggestions":"on"}};</script>        <script nonce="be8ca30f0b47f2584be1a23266e648f9">window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };plausible('pageview', { props: {website: 5345802 }});</script>
+<script src="../assets.jwwb.nl/assets/build/website-rendering/en-GB1298.js?bust=cf18a12efd2e9580cec0" nonce="be8ca30f0b47f2584be1a23266e648f9"></script>
+<script src="../assets.jwwb.nl/assets/website-rendering/runtime.83873eca6f8ea0bbcded5311.js?bust=967d40bf7c81bb2096a3" nonce="be8ca30f0b47f2584be1a23266e648f9"></script>
+<script src="../assets.jwwb.nl/assets/website-rendering/166.5a795a088a6b10acf59e0e6c.js?bust=d6e2cf922a8a672c588d" nonce="be8ca30f0b47f2584be1a23266e648f9"></script>
+<script src="../assets.jwwb.nl/assets/website-rendering/main.38b389aade70f4d698c5426f.js?bust=6bb3cc90bdf74ee6e38a" nonce="be8ca30f0b47f2584be1a23266e648f9"></script>
+<script src="https://www.webador.com/v2/unsafe-token/5345802" nonce="be8ca30f0b47f2584be1a23266e648f9" async="1"></script>    </body>
+
+<!-- Mirrored from free-5345802.webadorsite.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Sep 2024 00:28:38 GMT -->
+</html>
